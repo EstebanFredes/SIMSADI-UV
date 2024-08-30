@@ -1,2 +1,2 @@
 # SIMSADI-UV
-Repositorio con proyectos de título de estudiantes de la Universidad de Valparaíso para SIMSADI 
+Repositorio con proyectos de título de estudiantes de Ingeniería Civil Biomédica de la Universidad de Valparaíso para SIMSADI (Laboratorio de simulacion de ecosistema de salud digital).
