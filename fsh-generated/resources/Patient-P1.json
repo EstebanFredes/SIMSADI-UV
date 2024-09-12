@@ -1,0 +1,58 @@
+{
+  "resourceType": "Patient",
+  "id": "P1",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/Paciente"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI.",
+            "code": "NNCHL",
+            "display": "RUN"
+          }
+        ]
+      },
+      "use": "official",
+      "value": "66.666.666-k"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Anaqueen",
+        "Darth"
+      ],
+      "use": "official",
+      "family": "Vader",
+      "_family": {
+        "extension": [
+          {
+            "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido",
+            "valueString": "Perez"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "male"
+          }
+        ]
+      },
+      "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SexoBiologico"
+    }
+  ],
+  "active": true,
+  "gender": "male",
+  "birthDate": "1970-03-24"
+}

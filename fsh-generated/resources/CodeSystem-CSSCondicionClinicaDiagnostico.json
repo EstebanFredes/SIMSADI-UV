@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSCondicionClinicaDiagnostico",
+  "id": "CSSCondicionClinicaDiagnostico",
+  "title": "Estado de la patología",
+  "description": "Este es un codeSystem en base a los posibles opciones de estado de la patología.",
+  "url": "http://falp.org/CodeSystem/CSSCondicionClinicaDiagnostico",
+  "concept": [
+    {
+      "code": "active",
+      "display": "active"
+    },
+    {
+      "code": "inactive",
+      "display": "inactive"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 2
+}

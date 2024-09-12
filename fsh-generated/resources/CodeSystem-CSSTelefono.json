@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSTelefono",
+  "id": "CSSTelefono",
+  "title": "Contacto del paciente",
+  "description": "Contacto con el paciente.",
+  "url": "http://falp.org/CodeSystem/CSSTelefono",
+  "concept": [
+    {
+      "code": "phone",
+      "display": "phone"
+    },
+    {
+      "code": "cellphon",
+      "display": "cellphon"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 2
+}

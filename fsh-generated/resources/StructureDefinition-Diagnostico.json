@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Diagnostico",
+  "url": "http://falp.org/StructureDefinition/Diagnostico",
+  "name": "Diagnostico",
+  "status": "draft",
+  "description": "Este es un perfil para realizar diagnóstico según examen de biopsias realizados.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.identifier",
+        "path": "DiagnosticReport.identifier",
+        "short": "Identificador de la persona",
+        "definition": "Se define el identificador como aquel que lo distingue del resto de los integrantes de la sociedad y el identificador de pila",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.identifier.extension:identificador",
+        "path": "DiagnosticReport.identifier.extension",
+        "sliceName": "identificador",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/identifier-validDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "short": "Estado, valores posibles: preliminary | final | amended | entered-in-error",
+        "definition": "Estado del documento",
+        "patternCode": "final"
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Paciente"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "short": "fecha y hora en que fue emitido este documento.",
+        "definition": "fecha y hora en que fue emitido el documento solicitante."
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media",
+        "short": "Comentarios adicionales sobre la imagen mostrada.",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "short": "Interpretación de los resultados."
+      },
+      {
+        "id": "DiagnosticReport.presentedForm",
+        "path": "DiagnosticReport.presentedForm",
+        "short": "Informe completo de los resultados obtenidos.",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

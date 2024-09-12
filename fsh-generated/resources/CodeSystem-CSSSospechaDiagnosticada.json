@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSSospechaDiagnosticada",
+  "id": "CSSSospechaDiagnosticada",
+  "title": "Estado dde identificador de la sospecha diagnosticada.",
+  "description": "Este es un codeSystem en base a los posibles identificadores de la sospecha diagnosticada.",
+  "url": "http://falp.org/CodeSystem/CSSSospechaDiagnosticada",
+  "concept": [
+    {
+      "code": "Sospecha",
+      "display": "Sospecha"
+    },
+    {
+      "code": "confirmed",
+      "display": "Confirmed"
+    },
+    {
+      "code": "noconfirmed",
+      "display": "No confirmed"
+    },
+    {
+      "code": "faltainformacion",
+      "display": "Falta información"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 4
+}

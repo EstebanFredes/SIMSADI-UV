@@ -1,0 +1,95 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ProcedimientosQuirurgicos",
+  "url": "http://falp.org/StructureDefinition/ProcedimientosQuirurgicos",
+  "name": "ProcedimientosQuirurgicos",
+  "status": "draft",
+  "description": "Este es un perfil donde se encontrarán los procedimientos quierúrgicos.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.identifier",
+        "path": "Procedure.identifier",
+        "short": "Identificador de la persona",
+        "definition": "Se define el identificador como aquel que lo distingue del resto de los integrantes de la sociedad y el identificador de pila",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Procedure.identifier.extension:identificador",
+        "path": "Procedure.identifier.extension",
+        "sliceName": "identificador",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/identifier-validDate"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.status",
+        "path": "Procedure.status",
+        "short": "Estado, valores posibles : \tpreparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+        "definition": "Estado del diágnostico solicitado del paciente.",
+        "patternCode": "preparation",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/event-status"
+        }
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Paciente"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Procedure.report",
+        "path": "Procedure.report",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.note",
+        "path": "Procedure.note",
+        "short": "anotaciones",
+        "definition": "en esta sección se añade información adicional.",
+        "max": "1"
+      }
+    ]
+  }
+}

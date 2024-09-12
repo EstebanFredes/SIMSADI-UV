@@ -1,0 +1,495 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "CORE_falp",
+  "url": "http://falp.org/ImplementationGuide/CORE_falp",
+  "version": "0.1.0",
+  "name": "CORE_falp",
+  "status": "draft",
+  "publisher": "Esteban Fredes",
+  "contact": [
+    {
+      "name": "Esteban Fredes",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://biomedica.uv.cl"
+        }
+      ]
+    }
+  ],
+  "packageId": "CORE_falp",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.cl.clcore",
+      "version": "1.8.10",
+      "uri": "https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore",
+      "id": "hl7_fhir_cl_clcore"
+    },
+    {
+      "packageId": "hl7.fhir.cl.minsal.eis",
+      "version": "dev",
+      "uri": "https://interoperabilidad.minsal.cl/fhir/ig/eis/ImplementationGuide/hl7.fhir.cl.minsal.eis",
+      "id": "hl7_fhir_cl_minsal_eis"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/AmbitoClinico"
+        },
+        "name": "AmbitoClinico",
+        "description": "Documento de datos el ámbito clínico.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSAsignacion"
+        },
+        "name": "Asignación de identificador de laboratorio según tipo de muestra.",
+        "description": "identificador de laboratorio según tipo de muestra.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSAsignacion"
+        },
+        "name": "Asignación de identificador de laboratorio según tipo de muestra.",
+        "description": "Identificador de laboratorio según tipo de muestra.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BundleResultados"
+        },
+        "name": "Bundle Resultados",
+        "description": "Bundle par agrupar recursos para el envío de la respuesta del examen de biopsia",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BundleSolicitud"
+        },
+        "name": "Bundle Solicitud",
+        "description": "Bundle para agrupar recursos para el envío de la solicitud de biopsia",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSCondicionClinica"
+        },
+        "name": "condición clínica.",
+        "description": "Este es un codeSystem en base a los posibles opciones de   condición clínica del paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSTelefono"
+        },
+        "name": "Contacto con el paciente.",
+        "description": "Medio de contacto con el paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSTelefono"
+        },
+        "name": "Contacto del paciente",
+        "description": "Contacto con el paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSDocumento1"
+        },
+        "name": "Códigos de sección del documento",
+        "description": "Este es un codeSystem en base a las secciones definidas en el documento.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Diagnostico"
+        },
+        "name": "Diagnostico",
+        "description": "Este es un perfil para realizar diagnóstico según examen de biopsias realizados.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DocumentoResultados"
+        },
+        "name": "Documento de informe de resultados de exámen de Biopsia.",
+        "description": "Documento de salida de informe con resultados del procedimiento realizado.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DocumentoBiopsia"
+        },
+        "name": "Documento de solicitud de biopsia",
+        "description": "Documento de entrada para solicitud de biopsia",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Composition/doc"
+        },
+        "name": "Documento de solicitud de Biopsia.",
+        "description": "Ejemplo de documento de solicitud de biopsia.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/DocumentoBiopsia"
+      },
+      {
+        "reference": {
+          "reference": "Composition/DOcumento"
+        },
+        "name": "Documento de solicitud de Biopsia.",
+        "description": "Ejemplo de documento de resultados de Biopsia",
+        "exampleCanonical": "http://falp.org/StructureDefinition/DocumentoResultados"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/EjBundleSolicitud"
+        },
+        "name": "Ejemplo Bundle solicitud",
+        "description": "Ejemplo de estructura de un perfil Bundle para la solicitud de biopsia",
+        "exampleCanonical": "http://falp.org/StructureDefinition/BundleSolicitud"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/identificador"
+        },
+        "name": "Ejemplo de muestra biológica para procedimiento.",
+        "description": "Ejemplo de datos necesarios muestra de procedimiento.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/EjOrganizacionCL"
+        },
+        "name": "Ejemplo de organización que solicita examen.",
+        "description": "Institución u organización que solicita la toma del examen.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/Organizacion"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/identificador"
+        },
+        "name": "Ejemplo de Procedimientos Quirúrgicos.",
+        "description": "Ejemplo de datos de Procedimientos Quirúrgicos.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/ProcedimientosQuirurgicos"
+      },
+      {
+        "reference": {
+          "reference": "Patient/P1"
+        },
+        "name": "Ejemplo de Recurso Paciente",
+        "description": "Paciente ficticio nacional CI Chilena, sin sistema de validación \"http://regcivil.cl/Validacion/RUN\" ficticio, cuyo nombre se decribe mediante el oficial y uno social. La dirección tampoco es real.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/Paciente"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/identificador"
+        },
+        "name": "Ejemplo de Servicio Solicitante",
+        "description": "Ejemplo de datos del Servico Solicitante.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/ServicioSolicitante"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/identificador"
+        },
+        "name": "Ejemplo de un Diagnóstico de cáncer.",
+        "description": "Diagnóstico confirmado de  cáncer mediante una solicitud de biopsias.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/Diagnostico"
+      },
+      {
+        "reference": {
+          "reference": "Composition/CondicionClinica"
+        },
+        "name": "Ejemplo de ámbito Clínico.",
+        "description": "descripción de datos correspondientes al Ámbito Clínico.",
+        "exampleCanonical": "http://falp.org/StructureDefinition/AmbitoClinico"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/P1"
+        },
+        "name": "EjProfesional",
+        "description": "Ejemplo de Prestador",
+        "exampleCanonical": "http://falp.org/StructureDefinition/Profesional"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSSospechaDiagnosticada"
+        },
+        "name": "Estado dde identificador de la sospecha diagnosticada.",
+        "description": "Este es un codeSystem en base a los posibles identificadores de la sospecha diagnosticada.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSSospechaDiagnosticada"
+        },
+        "name": "Estado dde identificador de la sospecha diagnosticada.",
+        "description": "Este es un codeSystem en base a los posibles identificadores de la sospecha diagnosticada.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSEstadoClinico"
+        },
+        "name": "Estado de la condición clínica.",
+        "description": "Este es un codeSystem en base a los posibles opciones de  estado de la  condición clínica del paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSCondicionClinicaDiagnostico"
+        },
+        "name": "Estado de la patología",
+        "description": "Este es un codeSystem en base a los posibles opciones de estado de la patología.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSCondicionClinicaDiagnostico"
+        },
+        "name": "Estado de la patología",
+        "description": "Este es un codeSystem en base a los posibles opciones de estado de la patología.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Asignacion1"
+        },
+        "name": "Extension de asignación",
+        "description": "Extension de códigos para asignación.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CondicionClinica"
+        },
+        "name": "Extension de Condición Clínica.",
+        "description": "Extension de códigos para Condición Clínica.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CSSCondicionClinicaDiagnostico"
+        },
+        "name": "Extension de Condición Clínica.",
+        "description": "Extension de códigos para Condición Clínica.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Telefono1"
+        },
+        "name": "Extension de contacto",
+        "description": "Extension de códigos para contacto.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/EstadoClinico"
+        },
+        "name": "Extension de estado clínico.",
+        "description": "Extension de códigos para Estado Clínico.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Identificador"
+        },
+        "name": "Extension de identificador",
+        "description": "Extension de códigos para identificador.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SospechaDiagnosticada"
+        },
+        "name": "Extension de Sospecha Diagnostcada",
+        "description": "Extension de códigos para sospecha Diagnosticada.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ServicioSolicitante1"
+        },
+        "name": "Extension del Servicio Solicitante.",
+        "description": "Extension de códigos para Servicio Solicitante.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Sitio1"
+        },
+        "name": "Extension del Sitio del Cuerpo.",
+        "description": "Extension de códigos para sitio del cuerpo.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Documento1"
+        },
+        "name": "Extension Documento",
+        "description": "Extension de códigos para documento.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSIdentificador"
+        },
+        "name": "Identificador",
+        "description": "Este es un codeSystem en base a los posibles opciones de identificadores.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Informe"
+        },
+        "name": "Modelo de un informe de biopsia",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Muestra"
+        },
+        "name": "Muestra",
+        "description": "Este es un perfil donde se encontrarán los datos de la muestra",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Organizacion"
+        },
+        "name": "Organizacion",
+        "description": "Este es un perfil donde se encontrarán los datos de la organización",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Paciente"
+        },
+        "name": "Paciente",
+        "description": "Este es un perfil donde se encontrarán los datos personales del paciente",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ProcedimientosQuirurgicos"
+        },
+        "name": "ProcedimientosQuirurgicos",
+        "description": "Este es un perfil donde se encontrarán los procedimientos quierúrgicos.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Profesional"
+        },
+        "name": "Profesional",
+        "description": "Este es un perfil donde se encontrarán los datos personales del profesional",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSDocumento1"
+        },
+        "name": "secciones por códigos",
+        "description": "secciones que tendrá el documento de entrada de solicitud de biopsia.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSIdentificador"
+        },
+        "name": "secciones por códigos",
+        "description": "Opciones posibles de identifcadores.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSEstadoClinico"
+        },
+        "name": "secciones por códigos",
+        "description": "Estados de clínico del paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSCondicionClinica"
+        },
+        "name": "secciones por códigos",
+        "description": " condición clínica del paciente.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSServicioSolicitante"
+        },
+        "name": "servicio clínico solicitante.",
+        "description": "Identificación del servicio clínico que solicita el exámen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSServicioSolicitante"
+        },
+        "name": "servicio clínico solicitante.",
+        "description": "Identificador del servicio clínico que solicita el exámen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ServicioSolicitante"
+        },
+        "name": "ServicioSolicitante",
+        "description": "Este es un perfil donde se encontrarán los datos del servicio de salud que realiza la petición de muestra",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VSSSitioCuerpo"
+        },
+        "name": "Sitio del cuerpo en el cual se encuentra la muestraa a examinar.",
+        "description": "Descripción especifica del sitio del cuerpo en el cual se encuentra la muestra.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CSSSitioCuerpo"
+        },
+        "name": "Sitio del cuerpo en el cual se encuentra la muestraa a examinar.",
+        "description": "Descripción especifica del sitio del cuerpo en el cual se encuentra la muestra.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2024+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "Composition",
+  "id": "CondicionClinica",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/AmbitoClinico"
+    ]
+  },
+  "subject": {
+    "display": "Paciente"
+  },
+  "section": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "https://biomedica.uv.cl/fhir/CodeSystem/CSSDiagnostico",
+            "code": "03"
+          }
+        ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://falp.org/StructureDefinition/CondicionClinica",
+      "valueCode": "01"
+    },
+    {
+      "url": "http://falp.org/StructureDefinition/SospechaDiagnosticada",
+      "valueCode": "confirmed"
+    }
+  ],
+  "author": [
+    {
+      "display": "Profesional"
+    }
+  ],
+  "type": {
+    "text": "Ámbito Clínico"
+  },
+  "date": "2023-03-24",
+  "title": "Descripción de datos correspondientes al ámbito Clínico",
+  "status": "final"
+}

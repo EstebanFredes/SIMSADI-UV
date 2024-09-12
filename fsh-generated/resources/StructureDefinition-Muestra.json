@@ -1,0 +1,83 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Muestra",
+  "url": "http://falp.org/StructureDefinition/Muestra",
+  "name": "Muestra",
+  "status": "draft",
+  "description": "Este es un perfil donde se encontrarán los datos de la muestra",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Specimen",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Specimen.identifier",
+        "path": "Specimen.identifier",
+        "max": "1"
+      },
+      {
+        "id": "Specimen.accessionIdentifier",
+        "path": "Specimen.accessionIdentifier",
+        "min": 1
+      },
+      {
+        "id": "Specimen.status",
+        "path": "Specimen.status",
+        "short": "Estado, valores posibles : \tavailable | unavailable | unsatisfactory | entered-in-error",
+        "definition": "Estado del diágnostico solicitado del paciente.",
+        "min": 1,
+        "patternCode": "available",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/specimen-status"
+        }
+      },
+      {
+        "id": "Specimen.type",
+        "path": "Specimen.type",
+        "min": 1
+      },
+      {
+        "id": "Specimen.subject",
+        "path": "Specimen.subject",
+        "min": 1
+      },
+      {
+        "id": "Specimen.receivedTime",
+        "path": "Specimen.receivedTime",
+        "min": 1
+      },
+      {
+        "id": "Specimen.request",
+        "path": "Specimen.request",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Specimen.collection",
+        "path": "Specimen.collection",
+        "min": 1
+      },
+      {
+        "id": "Specimen.collection.collector",
+        "path": "Specimen.collection.collector",
+        "min": 1
+      },
+      {
+        "id": "Specimen.collection.quantity",
+        "path": "Specimen.collection.quantity",
+        "min": 1
+      },
+      {
+        "id": "Specimen.container",
+        "path": "Specimen.container",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

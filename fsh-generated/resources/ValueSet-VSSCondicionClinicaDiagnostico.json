@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSSCondicionClinicaDiagnostico",
+  "id": "VSSCondicionClinicaDiagnostico",
+  "title": "Estado de la patología",
+  "description": "Este es un codeSystem en base a los posibles opciones de estado de la patología.",
+  "url": "http://falp.org/ValueSet/VSSCondicionClinicaDiagnostico",
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://falp.org/CodeSystem/CSSCondicionClinicaDiagnostico"
+      }
+    ]
+  }
+}

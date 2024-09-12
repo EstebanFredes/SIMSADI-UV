@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSEstadoClinico",
+  "id": "CSSEstadoClinico",
+  "title": "Estado de la condición clínica.",
+  "description": "Este es un codeSystem en base a los posibles opciones de  estado de la  condición clínica del paciente.",
+  "url": "http://falp.org/CodeSystem/CSSEstadoClinico",
+  "concept": [
+    {
+      "code": "Sospecha",
+      "display": "Sospecha"
+    },
+    {
+      "code": "confirmed",
+      "display": "Confirmed"
+    },
+    {
+      "code": "noconfirmed",
+      "display": "No confirmed"
+    },
+    {
+      "code": "faltainformacion",
+      "display": "Falta información"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 4
+}

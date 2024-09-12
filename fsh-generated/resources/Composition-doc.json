@@ -1,0 +1,93 @@
+{
+  "resourceType": "Composition",
+  "id": "doc",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/DocumentoBiopsia"
+    ]
+  },
+  "identifier": {
+    "value": "Documento"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "12345-6",
+        "display": "Biopsy Tissue Specimen"
+      }
+    ]
+  },
+  "subject": {
+    "display": "Paciente"
+  },
+  "section": [
+    {
+      "title": "documento de Biopsia"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "01",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Historial de enfermedades de miembros de la familia Narrativa"
+        }
+      ],
+      "title": "Antecedentes Clínicos."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "03",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Nota de operación quirúrgica procedimiento quirúrgico Narrativa"
+        }
+      ],
+      "title": "Procedimientos Quirurgicos."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "05",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Nota de operación quirúrgica Diagnóstico postoperatorio Narrativa"
+        }
+      ],
+      "title": "Diagnostico."
+    }
+  ],
+  "author": [
+    {
+      "display": "profesional"
+    }
+  ],
+  "event": [
+    {
+      "period": {
+        "start": "2024-04-20",
+        "end": "2024-07-20"
+      }
+    }
+  ],
+  "status": "final",
+  "title": "Documento de solicitud de Biopsia.",
+  "date": "2024-05-20"
+}

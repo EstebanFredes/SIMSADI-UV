@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EstadoClinico",
+  "url": "http://falp.org/StructureDefinition/EstadoClinico",
+  "name": "EstadoClinico",
+  "title": "Extension de estado clínico.",
+  "status": "draft",
+  "description": "Extension de códigos para Estado Clínico.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "http://falp.org/StructureDefinition/AmbitoClinico#Composition",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Extension de estado clínico.",
+        "definition": "Extension de códigos para Estado Clínico."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://falp.org/StructureDefinition/EstadoClinico"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Codigos de uno de nuestros VS",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://falp.org/ValueSet/VSSEstadoClinico"
+        }
+      }
+    ]
+  }
+}

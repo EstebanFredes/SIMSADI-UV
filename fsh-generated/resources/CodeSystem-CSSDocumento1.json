@@ -1,0 +1,55 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSDocumento1",
+  "id": "CSSDocumento1",
+  "title": "Códigos de sección del documento",
+  "description": "Este es un codeSystem en base a las secciones definidas en el documento.",
+  "url": "http://falp.org/CodeSystem/CSSDocumento1",
+  "concept": [
+    {
+      "code": "01",
+      "display": "AntecedentesClinicos"
+    },
+    {
+      "code": "02",
+      "display": "Examen Macroscopico"
+    },
+    {
+      "code": "03",
+      "display": "ProcedimientosQuirurgicos"
+    },
+    {
+      "code": "04",
+      "display": "DescripcionMicroscopica"
+    },
+    {
+      "code": "05",
+      "display": "Diagnostico"
+    },
+    {
+      "code": "06",
+      "display": "DiagnosticoInicial"
+    },
+    {
+      "code": "07",
+      "display": "DiagnosticoFinal"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 7
+}

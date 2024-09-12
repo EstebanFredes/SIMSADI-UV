@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Paciente",
+  "url": "http://falp.org/StructureDefinition/Paciente",
+  "name": "Paciente",
+  "status": "draft",
+  "description": "Este es un perfil donde se encontrarán los datos personales del paciente",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePacienteCl",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "min": 1
+      },
+      {
+        "id": "Patient.extension:SexoBiologico",
+        "path": "Patient.extension",
+        "sliceName": "SexoBiologico",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "min": 1
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.name:NombreOficial",
+        "path": "Patient.name",
+        "sliceName": "NombreOficial",
+        "min": 1
+      },
+      {
+        "id": "Patient.name:NombreOficial.family",
+        "path": "Patient.name.family",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "min": 1
+      }
+    ]
+  }
+}

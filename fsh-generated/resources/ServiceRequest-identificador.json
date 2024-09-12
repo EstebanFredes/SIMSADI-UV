@@ -1,0 +1,55 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "identificador",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/ServicioSolicitante"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/identifier-use",
+            "code": "official"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "display": "Paciente"
+  },
+  "requester": {
+    "display": "Hospital"
+  },
+  "performer": [
+    {
+      "display": "Juan"
+    }
+  ],
+  "locationReference": [
+    {
+      "display": "mentón"
+    }
+  ],
+  "reasonReference": [
+    {
+      "display": "diagnosticReport"
+    }
+  ],
+  "supportingInfo": [
+    {
+      "display": "informe de Muestra"
+    }
+  ],
+  "specimen": [
+    {
+      "display": "Muestra"
+    }
+  ],
+  "status": "active",
+  "intent": "original-order",
+  "priority": "urgent"
+}

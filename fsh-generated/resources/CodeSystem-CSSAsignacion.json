@@ -1,0 +1,55 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSAsignacion",
+  "id": "CSSAsignacion",
+  "title": "Asignación de identificador de laboratorio según tipo de muestra.",
+  "description": "Identificador de laboratorio según tipo de muestra.",
+  "url": "http://falp.org/CodeSystem/CSSAsignacion",
+  "concept": [
+    {
+      "code": "01",
+      "display": "sangre"
+    },
+    {
+      "code": "02",
+      "display": "orina"
+    },
+    {
+      "code": "03",
+      "display": "saliva"
+    },
+    {
+      "code": "04",
+      "display": "tejido"
+    },
+    {
+      "code": "05",
+      "display": "células"
+    },
+    {
+      "code": "06",
+      "display": "ADN"
+    },
+    {
+      "code": "07",
+      "display": "ARN"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 7
+}

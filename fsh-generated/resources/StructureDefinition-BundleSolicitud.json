@@ -1,0 +1,232 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BundleSolicitud",
+  "url": "http://falp.org/StructureDefinition/BundleSolicitud",
+  "name": "BundleSolicitud",
+  "title": "Bundle Solicitud",
+  "status": "draft",
+  "description": "Bundle para agrupar recursos para el envío de la solicitud de biopsia",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "short": "Tipo de Bundle",
+        "patternCode": "document",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/bundle-type"
+        }
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resolve()"
+            }
+          ],
+          "rules": "open",
+          "description": "Entradas del bundle que refenciarán a las doferentes partes del documento de soicitud de biopsia.",
+          "ordered": false
+        },
+        "short": "entradas del documento",
+        "definition": "Entradas para documento de solicitud de biopsia",
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryDocumento",
+        "path": "Bundle.entry",
+        "sliceName": "entryDocumento",
+        "short": "Documento solicitud de biopsia",
+        "definition": "Documento composition ",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryDocumento.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryDocumento.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "http://falp.org/StructureDefinition/DocumentoBiopsia"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:entryPaciente",
+        "path": "Bundle.entry",
+        "sliceName": "entryPaciente",
+        "short": "Paciente al que corresponde la solicitud",
+        "definition": "Paciente al que se le debe realizar la biopsia, solicitada mediante el documento ",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryPaciente.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryPaciente.resource",
+        "path": "Bundle.entry.resource",
+        "short": "Paciente que se realizará la biopsia",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "http://falp.org/StructureDefinition/Paciente"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:entryPrestador",
+        "path": "Bundle.entry",
+        "sliceName": "entryPrestador",
+        "short": "Prestador que solicita la biopsia",
+        "definition": "Prestador que solocita la biopsia",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryPrestador.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryPrestador.resource",
+        "path": "Bundle.entry.resource",
+        "short": "Prestador solicitante",
+        "min": 1,
+        "type": [
+          {
+            "code": "Practitioner",
+            "profile": [
+              "http://falp.org/StructureDefinition/Profesional"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:entryAntecedentesClinicos",
+        "path": "Bundle.entry",
+        "sliceName": "entryAntecedentesClinicos",
+        "short": "Antecedentes clínicos",
+        "definition": "Antecedentes clinicos que presenta el paciente ",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryAntecedentesClinicos.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryAntecedentesClinicos.resource",
+        "path": "Bundle.entry.resource",
+        "short": "Antecedentes Clínicos",
+        "min": 1,
+        "type": [
+          {
+            "code": "Composition",
+            "profile": [
+              "http://falp.org/StructureDefinition/AmbitoClinico"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:entryProcedimientosQuirurgicos",
+        "path": "Bundle.entry",
+        "sliceName": "entryProcedimientosQuirurgicos",
+        "short": "Procedimiento quirúrgico a realizar",
+        "definition": "En esta sección van todos las descripciones generales  del examen macroscópico de la muestra.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:entryProcedimientosQuirurgicos.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryProcedimientosQuirurgicos.resource",
+        "path": "Bundle.entry.resource",
+        "short": "Procedimientos quirúrgicos",
+        "min": 1,
+        "type": [
+          {
+            "code": "Specimen",
+            "profile": [
+              "http://falp.org/StructureDefinition/Muestra"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:entryDiagnostico",
+        "path": "Bundle.entry",
+        "sliceName": "entryDiagnostico",
+        "short": "Diagnóstico inicial",
+        "definition": "Diagnóstico del prestador antes de realizar el examen de biopsia",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:entryDiagnostico.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "short": "Uri de identificación dentro del Bundle"
+      },
+      {
+        "id": "Bundle.entry:entryDiagnostico.resource",
+        "path": "Bundle.entry.resource",
+        "short": "Diagnpostico inicial",
+        "min": 1,
+        "type": [
+          {
+            "code": "DiagnosticReport",
+            "profile": [
+              "http://falp.org/StructureDefinition/Diagnostico"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

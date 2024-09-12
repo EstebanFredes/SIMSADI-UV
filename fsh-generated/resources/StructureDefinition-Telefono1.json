@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Telefono1",
+  "url": "http://falp.org/StructureDefinition/Telefono1",
+  "name": "Telefono1",
+  "title": "Extension de contacto",
+  "status": "draft",
+  "description": "Extension de códigos para contacto.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "http://falp.org/StructureDefinition/Profesional#Practitioner",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Extension de contacto",
+        "definition": "Extension de códigos para contacto."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://falp.org/StructureDefinition/Telefono1"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Codigos de uno de nuestros VS",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://falp.org/ValueSet/VSSTelefono"
+        }
+      }
+    ]
+  }
+}

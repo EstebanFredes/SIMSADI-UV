@@ -1,0 +1,67 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSServicioSolicitante",
+  "id": "CSSServicioSolicitante",
+  "title": "servicio clínico solicitante.",
+  "description": "Identificador del servicio clínico que solicita el exámen.",
+  "url": "http://falp.org/CodeSystem/CSSServicioSolicitante",
+  "concept": [
+    {
+      "code": "01",
+      "display": "anatomia Patológica"
+    },
+    {
+      "code": "02",
+      "display": "urgencia"
+    },
+    {
+      "code": "03",
+      "display": "pabellón"
+    },
+    {
+      "code": "04",
+      "display": "ginecolgía"
+    },
+    {
+      "code": "05",
+      "display": "neonatología"
+    },
+    {
+      "code": "06",
+      "display": "Hospitalización"
+    },
+    {
+      "code": "07",
+      "display": "UCI"
+    },
+    {
+      "code": "08",
+      "display": "UTI adulto"
+    },
+    {
+      "code": "09",
+      "display": "pediatría"
+    },
+    {
+      "code": "10",
+      "display": "psicolgía"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 10
+}

@@ -1,0 +1,298 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DocumentoResultados",
+  "url": "http://falp.org/StructureDefinition/DocumentoResultados",
+  "name": "DocumentoResultados",
+  "title": "Documento de informe de resultados de exámen de Biopsia.",
+  "status": "draft",
+  "description": "Documento de salida de informe con resultados del procedimiento realizado.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "short": "Identificador local para recurso de documeto que puede ser distinto para cada versión del mismo",
+        "definition": "Identificador para el recurso que contiene documento, puede ser usado de manera local. Este idetificador es independiente de la versión del documento",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "short": "Estado, valores posibles: preliminary | final | amended | entered-in-error",
+        "definition": "Estado del documento",
+        "patternCode": "final",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/composition-status"
+        }
+      },
+      {
+        "id": "Composition.type.text",
+        "path": "Composition.type.text",
+        "patternString": "extracto de"
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "short": "Paciente sobre el cual se ha generado este documento.",
+        "definition": "Paciente sobre el cual se ha generado este documento.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Paciente"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject.reference",
+        "path": "Composition.subject.reference",
+        "short": "Corresponde al paciente.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "short": "Fecha en la cual se obtiene el documento.",
+        "definition": "Definición de la fecha en la cual se logra obtener el documento."
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "short": "Prestador  el cual genera el documento.",
+        "definition": "Prestador encargado de  generar  este documento.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author.reference",
+        "path": "Composition.author.reference",
+        "short": "Corresponde al prestador.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "short": "Título del documento.",
+        "definition": "Título del documento.",
+        "patternString": "Documento de solicitud de Biopsia."
+      },
+      {
+        "id": "Composition.event",
+        "path": "Composition.event",
+        "short": "servicio clínicos asociados.",
+        "definition": "servicio clínico asociado al documento.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Composition.section.title",
+        "path": "Composition.section.title",
+        "min": 1
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://falp.org/ValueSet/VSSDocumento1"
+        }
+      },
+      {
+        "id": "Composition.section:AntecedentesClinicos",
+        "path": "Composition.section",
+        "sliceName": "AntecedentesClinicos",
+        "definition": "En esta sección van todos los antecedentes clínicos del paciente.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Composition.section:AntecedentesClinicos.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "01",
+              "system": "http://falp.org/CodeSystem/CSSDocumento1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:AntecedentesClinicos.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/AmbitoClinico"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:ExamenMacroscopico",
+        "path": "Composition.section",
+        "sliceName": "ExamenMacroscopico",
+        "definition": "En esta sección van todos las descripciones generales  del examen macroscópico de la muestra.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.section:ExamenMacroscopico.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "02",
+              "system": "http://falp.org/CodeSystem/CSSDocumento1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:ExamenMacroscopico.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/AmbitoClinico"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:DescripcionMicroscopica",
+        "path": "Composition.section",
+        "sliceName": "DescripcionMicroscopica",
+        "definition": "En esta sección van todos las descripciones específicas de la muestra.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.section:DescripcionMicroscopica.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "04",
+              "system": "http://falp.org/CodeSystem/CSSDocumento1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:DescripcionMicroscopica.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Muestra"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:DiagnosticoInicial",
+        "path": "Composition.section",
+        "sliceName": "DiagnosticoInicial",
+        "definition": "En esta sección va el resultado inicial  del procedimiento.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Composition.section:DiagnosticoInicial.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "06",
+              "system": "http://falp.org/CodeSystem/CSSDocumento1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:DiagnosticoInicial.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Diagnostico"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:DiagnosticoFinal",
+        "path": "Composition.section",
+        "sliceName": "DiagnosticoFinal",
+        "definition": "En esta sección va el resultado final del procedimiento.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Composition.section:DiagnosticoFinal.code",
+        "path": "Composition.section.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "07",
+              "system": "http://falp.org/CodeSystem/CSSDocumento1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Composition.section:DiagnosticoFinal.entry",
+        "path": "Composition.section.entry",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Diagnostico"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

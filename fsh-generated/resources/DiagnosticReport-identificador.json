@@ -1,0 +1,65 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "identificador",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/Diagnostico"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://hl7.org/fhir/R4/v2/0203",
+            "code": "SNO",
+            "display": "Serial Number"
+          }
+        ]
+      },
+      "use": "official",
+      "value": "12.676.445-k"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "100-8",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "subject": {
+    "display": "Paciente"
+  },
+  "performer": [
+    {
+      "display": "profesional"
+    }
+  ],
+  "resultsInterpreter": [
+    {
+      "display": "profesional"
+    }
+  ],
+  "specimen": [
+    {
+      "display": "Extracto de colón"
+    }
+  ],
+  "result": [
+    {
+      "display": "Se observa hipertrofia de la epidermis con presencia de queratinocitos displásicos,\r\nLa dermis muestra un infiltrado inflamatorio crónico con predominancia de linfocitos."
+    }
+  ],
+  "presentedForm": [
+    {
+      "title": "Descripción Macroscopica",
+      "url": "http://hl7.org/fhir/ValueSet/languages"
+    }
+  ],
+  "status": "final",
+  "effectiveDateTime": "2023-07-13T14:15:30-04:00",
+  "issued": "2024-06-22T14:15:30-03:00",
+  "conclusion": "La biopsia realizada en el tejido del paciente ha revelado la presencia de células malignas, compatibles con un carcinoma de tipo adenocarcinoma. Las características histológicas observadas sugieren que la neoplasia es de grado intermedio, con infiltración en tejidos adyacentes y evidencia de mitosis aumentada."
+}

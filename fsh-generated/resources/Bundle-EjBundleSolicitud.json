@@ -1,0 +1,172 @@
+{
+  "resourceType": "Bundle",
+  "id": "EjBundleSolicitud",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/BundleSolicitud"
+    ]
+  },
+  "identifier": {
+    "value": "bundleSoli"
+  },
+  "entry": [
+    {
+      "fullUrl": "https://esteban.fredes.cl/fhir/siscarpeta/StructureDefinition/DocumentoBiopsia",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "doc",
+        "meta": {
+          "profile": [
+            "http://falp.org/StructureDefinition/DocumentoBiopsia"
+          ]
+        },
+        "identifier": {
+          "value": "Documento"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "12345-6",
+              "display": "Biopsy Tissue Specimen"
+            }
+          ]
+        },
+        "subject": {
+          "display": "Paciente"
+        },
+        "section": [
+          {
+            "title": "documento de Biopsia"
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "01",
+                  "system": "http://falp.org/CodeSystem/CSSDocumento1"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "display": "Historial de enfermedades de miembros de la familia Narrativa"
+              }
+            ],
+            "title": "Antecedentes Clínicos."
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "03",
+                  "system": "http://falp.org/CodeSystem/CSSDocumento1"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "display": "Nota de operación quirúrgica procedimiento quirúrgico Narrativa"
+              }
+            ],
+            "title": "Procedimientos Quirurgicos."
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "05",
+                  "system": "http://falp.org/CodeSystem/CSSDocumento1"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "display": "Nota de operación quirúrgica Diagnóstico postoperatorio Narrativa"
+              }
+            ],
+            "title": "Diagnostico."
+          }
+        ],
+        "author": [
+          {
+            "display": "profesional"
+          }
+        ],
+        "event": [
+          {
+            "period": {
+              "start": "2024-04-20",
+              "end": "2024-07-20"
+            }
+          }
+        ],
+        "status": "final",
+        "title": "Documento de solicitud de Biopsia.",
+        "date": "2024-05-20"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "P1",
+        "meta": {
+          "profile": [
+            "http://falp.org/StructureDefinition/Paciente"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI.",
+                  "code": "NNCHL",
+                  "display": "RUN"
+                }
+              ]
+            },
+            "use": "official",
+            "value": "66.666.666-k"
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Anaqueen",
+              "Darth"
+            ],
+            "use": "official",
+            "family": "Vader",
+            "_family": {
+              "extension": [
+                {
+                  "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SegundoApellido",
+                  "valueString": "Perez"
+                }
+              ]
+            }
+          }
+        ],
+        "extension": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/administrative-gender",
+                  "code": "male"
+                }
+              ]
+            },
+            "url": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/SexoBiologico"
+          }
+        ],
+        "active": true,
+        "gender": "male",
+        "birthDate": "1970-03-24"
+      }
+    }
+  ],
+  "type": "document",
+  "timestamp": "2024-05-28T22:12:21Z"
+}

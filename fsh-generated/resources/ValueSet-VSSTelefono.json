@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSSTelefono",
+  "id": "VSSTelefono",
+  "title": "Contacto con el paciente.",
+  "description": "Medio de contacto con el paciente.",
+  "url": "http://falp.org/ValueSet/VSSTelefono",
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://falp.org/CodeSystem/CSSTelefono"
+      }
+    ]
+  }
+}

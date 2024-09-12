@@ -1,0 +1,250 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Informe",
+  "url": "http://falp.org/StructureDefinition/Informe",
+  "name": "Informe",
+  "title": "Modelo de un informe de biopsia",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://falp.org/StructureDefinition/Informe",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Informe",
+        "path": "Informe",
+        "short": "Modelo de un informe de biopsia",
+        "definition": "Modelo de un informe de biopsia"
+      },
+      {
+        "id": "Informe.Paciente",
+        "path": "Informe.Paciente",
+        "short": "Nombres del pacienteSS",
+        "definition": "Nombres del pacienteSS",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.nombres",
+        "path": "Informe.Paciente.nombres",
+        "short": "Nombres del paciente",
+        "definition": "Nombres del paciente",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.given",
+        "path": "Informe.Paciente.given",
+        "short": "1er nombre de pila del paciente",
+        "definition": "1er nombre de pila del paciente",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "HumanName"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.identificador",
+        "path": "Informe.Paciente.identificador",
+        "short": "identificador del paciente",
+        "definition": "identificador del paciente",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.gender",
+        "path": "Informe.Paciente.gender",
+        "short": "Codigo asociado al sexo del paciente",
+        "definition": "Codigo asociado al sexo del paciente",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.fechaNacimeinto",
+        "path": "Informe.Paciente.fechaNacimeinto",
+        "short": "fecha de nacimiento",
+        "definition": "fecha de nacimiento",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.Hospital",
+        "path": "Informe.Paciente.Hospital",
+        "short": "Organización que solicita el exámen",
+        "definition": "Organización que solicita el exámen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.servicio",
+        "path": "Informe.Paciente.servicio",
+        "short": "servicio o unidad que solicita la muestra",
+        "definition": "servicio o unidad que solicita la muestra",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.nombreProfesional",
+        "path": "Informe.Paciente.nombreProfesional",
+        "short": "nombre del profesional que realiza el exámen",
+        "definition": "nombre del profesional que realiza el exámen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.Paciente.nombreProfesional.PrNombre",
+        "path": "Informe.Paciente.nombreProfesional.PrNombre",
+        "short": "1er nombre de pila del profesional",
+        "definition": "1er nombre de pila del profesional",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico",
+        "path": "Informe.ambitoClinico",
+        "short": "wwece",
+        "definition": "wwece",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico.diagnosticoClinico",
+        "path": "Informe.ambitoClinico.diagnosticoClinico",
+        "short": "Diágnostico clínico del paciente",
+        "definition": "Diágnostico clínico del paciente",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "DomainResource"
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico.antecedentesClinico",
+        "path": "Informe.ambitoClinico.antecedentesClinico",
+        "short": "Antecedentes clínicos del paciente",
+        "definition": "Antecedentes clínicos del paciente",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico.examenMacroscopico",
+        "path": "Informe.ambitoClinico.examenMacroscopico",
+        "short": "exámen macroscopico del paciente",
+        "definition": "exámen macroscopico del paciente",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico.descripcionMicroscopica",
+        "path": "Informe.ambitoClinico.descripcionMicroscopica",
+        "short": "descripción micróscopica de la muestra",
+        "definition": "descripción micróscopica de la muestra",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Informe.ambitoClinico.diagnostico",
+        "path": "Informe.ambitoClinico.diagnostico",
+        "short": "Diágnostico del paciente",
+        "definition": "Diágnostico del paciente",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Organizacion",
+  "url": "http://falp.org/StructureDefinition/Organizacion",
+  "name": "Organizacion",
+  "status": "draft",
+  "description": "Este es un perfil donde se encontrarán los datos de la organización",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CoreOrganizacionCl",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.active",
+        "path": "Organization.active",
+        "short": "nombre de la organización",
+        "definition": "nombre identificado de la organización en cuestión"
+      }
+    ]
+  }
+}

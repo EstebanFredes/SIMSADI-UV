@@ -1,0 +1,132 @@
+{
+  "resourceType": "Composition",
+  "id": "DOcumento",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/DocumentoResultados"
+    ]
+  },
+  "identifier": {
+    "value": "Documento de resultados"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "66121-5",
+        "display": "Biopsy Report"
+      }
+    ]
+  },
+  "section": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "01"
+          }
+        ]
+      },
+      "title": "Documento de resultado de biopsia"
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "01",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Ámbitoclinico"
+        }
+      ],
+      "title": "Antecedentes Clínicos."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "02",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Servicio Solicitante."
+        }
+      ],
+      "title": "Examen Macróscopico."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "04",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "Muestra"
+        }
+      ],
+      "title": "DescripciónMicroscópica."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "06",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "DiagnósticoInicial"
+        }
+      ],
+      "title": "Diagnóstico Inicial."
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "07",
+            "system": "http://falp.org/CodeSystem/CSSDocumento1"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "display": "DiagnósticoFinal"
+        }
+      ],
+      "title": "Diagnóstico Final."
+    }
+  ],
+  "author": [
+    {
+      "reference": "Practitioner/P1"
+    }
+  ],
+  "event": [
+    {
+      "period": {
+        "start": "2024-04-13",
+        "end": "2024-07-23"
+      }
+    }
+  ],
+  "status": "final",
+  "title": "Documento de solicitud de Biopsia.",
+  "subject": {
+    "reference": "Patient/P1"
+  },
+  "date": "2024-05-12"
+}

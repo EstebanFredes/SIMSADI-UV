@@ -1,0 +1,434 @@
+[
+  {
+    "outputFile": "Bundle-EjBundleSolicitud.json",
+    "fshName": "EjBundleSolicitud",
+    "fshType": "Instance",
+    "fshFile": "ejBundleSoli.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "CodeSystem-CSSAsignacion.json",
+    "fshName": "CSSAsignacion",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 148,
+    "endLine": 164
+  },
+  {
+    "outputFile": "CodeSystem-CSSCondicionClinica.json",
+    "fshName": "CSSCondicionClinica",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 51,
+    "endLine": 62
+  },
+  {
+    "outputFile": "CodeSystem-CSSCondicionClinicaDiagnostico.json",
+    "fshName": "CSSCondicionClinicaDiagnostico",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 65,
+    "endLine": 76
+  },
+  {
+    "outputFile": "CodeSystem-CSSDocumento1.json",
+    "fshName": "CSSDocumento1",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 2,
+    "endLine": 19
+  },
+  {
+    "outputFile": "CodeSystem-CSSEstadoClinico.json",
+    "fshName": "CSSEstadoClinico",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 36,
+    "endLine": 49
+  },
+  {
+    "outputFile": "CodeSystem-CSSIdentificador.json",
+    "fshName": "CSSIdentificador",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 22,
+    "endLine": 33
+  },
+  {
+    "outputFile": "CodeSystem-CSSServicioSolicitante.json",
+    "fshName": "CSSServicioSolicitante",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 110,
+    "endLine": 129
+  },
+  {
+    "outputFile": "CodeSystem-CSSSitioCuerpo.json",
+    "fshName": "CSSSitioCuerpo",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 131,
+    "endLine": 146
+  },
+  {
+    "outputFile": "CodeSystem-CSSSospechaDiagnosticada.json",
+    "fshName": "CSSSospechaDiagnosticada",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 79,
+    "endLine": 92
+  },
+  {
+    "outputFile": "CodeSystem-CSSTelefono.json",
+    "fshName": "CSSTelefono",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystem.fsh",
+    "startLine": 97,
+    "endLine": 108
+  },
+  {
+    "outputFile": "Composition-CondicionClinica.json",
+    "fshName": "EjAmbitoClinico",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 328,
+    "endLine": 354
+  },
+  {
+    "outputFile": "Composition-DOcumento.json",
+    "fshName": "EjDocumentoResultados",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 139,
+    "endLine": 188
+  },
+  {
+    "outputFile": "Composition-doc.json",
+    "fshName": "EjDocumento",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 79,
+    "endLine": 118
+  },
+  {
+    "outputFile": "DiagnosticReport-identificador.json",
+    "fshName": "EjDiagnostico",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 41,
+    "endLine": 73
+  },
+  {
+    "outputFile": "Organization-EjOrganizacionCL.json",
+    "fshName": "EjOrganizacionCL",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 124,
+    "endLine": 135
+  },
+  {
+    "outputFile": "Patient-P1.json",
+    "fshName": "EjPaciente",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 2,
+    "endLine": 37
+  },
+  {
+    "outputFile": "Practitioner-P1.json",
+    "fshName": "EjProfesional",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 193,
+    "endLine": 226
+  },
+  {
+    "outputFile": "Procedure-identificador.json",
+    "fshName": "EjProcedimientosQuirurgicos",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 303,
+    "endLine": 323
+  },
+  {
+    "outputFile": "ServiceRequest-identificador.json",
+    "fshName": "EjServicioSolicitante",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 271,
+    "endLine": 297
+  },
+  {
+    "outputFile": "Specimen-identificador.json",
+    "fshName": "EjMuestra",
+    "fshType": "Instance",
+    "fshFile": "Ejemplos.fsh",
+    "startLine": 230,
+    "endLine": 265
+  },
+  {
+    "outputFile": "StructureDefinition-AmbitoClinico.json",
+    "fshName": "AmbitoClinico",
+    "fshType": "Profile",
+    "fshFile": "AmbitoClinico.fsh",
+    "startLine": 1,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-Asignacion1.json",
+    "fshName": "Asignacion1",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 65,
+    "endLine": 72
+  },
+  {
+    "outputFile": "StructureDefinition-BundleResultados.json",
+    "fshName": "BundleResultados",
+    "fshType": "Profile",
+    "fshFile": "bundleResultados.fsh",
+    "startLine": 1,
+    "endLine": 105
+  },
+  {
+    "outputFile": "StructureDefinition-BundleSolicitud.json",
+    "fshName": "BundleSolicitud",
+    "fshType": "Profile",
+    "fshFile": "BundleSolicitud.fsh",
+    "startLine": 1,
+    "endLine": 88
+  },
+  {
+    "outputFile": "StructureDefinition-CSSCondicionClinicaDiagnostico.json",
+    "fshName": "CSSCondicionClinicaDiagnostico",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 83,
+    "endLine": 90
+  },
+  {
+    "outputFile": "StructureDefinition-CondicionClinica.json",
+    "fshName": "CondicionClinica",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 74,
+    "endLine": 81
+  },
+  {
+    "outputFile": "StructureDefinition-Diagnostico.json",
+    "fshName": "Diagnostico",
+    "fshType": "Profile",
+    "fshFile": "Diagnostico.fsh",
+    "startLine": 2,
+    "endLine": 46
+  },
+  {
+    "outputFile": "StructureDefinition-Documento1.json",
+    "fshName": "Documento1",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 2,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-DocumentoBiopsia.json",
+    "fshName": "DocumentoBiopsia",
+    "fshType": "Profile",
+    "fshFile": "DocumentoBiopsia.fsh",
+    "startLine": 2,
+    "endLine": 102
+  },
+  {
+    "outputFile": "StructureDefinition-DocumentoResultados.json",
+    "fshName": "DocumentoResultados",
+    "fshType": "Profile",
+    "fshFile": "DocumentoResultados.fsh",
+    "startLine": 2,
+    "endLine": 127
+  },
+  {
+    "outputFile": "StructureDefinition-EstadoClinico.json",
+    "fshName": "EstadoClinico",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 20,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-Identificador.json",
+    "fshName": "Identificador",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 11,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-Informe.json",
+    "fshName": "Informe",
+    "fshType": "Logical",
+    "fshFile": "Gsolicitud.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-Muestra.json",
+    "fshName": "Muestra",
+    "fshType": "Profile",
+    "fshFile": "Muestra.fsh",
+    "startLine": 1,
+    "endLine": 27
+  },
+  {
+    "outputFile": "StructureDefinition-Organizacion.json",
+    "fshName": "Organizacion",
+    "fshType": "Profile",
+    "fshFile": "Organización.fsh",
+    "startLine": 2,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-Paciente.json",
+    "fshName": "Paciente",
+    "fshType": "Profile",
+    "fshFile": "patient.fsh",
+    "startLine": 2,
+    "endLine": 18
+  },
+  {
+    "outputFile": "StructureDefinition-ProcedimientosQuirurgicos.json",
+    "fshName": "ProcedimientosQuirurgicos",
+    "fshType": "Profile",
+    "fshFile": "ProcedimientosQuirurgicos.fsh",
+    "startLine": 2,
+    "endLine": 33
+  },
+  {
+    "outputFile": "StructureDefinition-Profesional.json",
+    "fshName": "Profesional",
+    "fshType": "Profile",
+    "fshFile": "Profesional.fsh",
+    "startLine": 4,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-ServicioSolicitante.json",
+    "fshName": "ServicioSolicitante",
+    "fshType": "Profile",
+    "fshFile": "ServicioSolicitante.fsh",
+    "startLine": 2,
+    "endLine": 59
+  },
+  {
+    "outputFile": "StructureDefinition-ServicioSolicitante1.json",
+    "fshName": "ServicioSolicitante1",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 56,
+    "endLine": 63
+  },
+  {
+    "outputFile": "StructureDefinition-Sitio1.json",
+    "fshName": "Sitio1",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 47,
+    "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-SospechaDiagnosticada.json",
+    "fshName": "SospechaDiagnosticada",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 29,
+    "endLine": 36
+  },
+  {
+    "outputFile": "StructureDefinition-Telefono1.json",
+    "fshName": "Telefono1",
+    "fshType": "Extension",
+    "fshFile": "Extensiones.fsh",
+    "startLine": 38,
+    "endLine": 45
+  },
+  {
+    "outputFile": "ValueSet-VSSAsignacion.json",
+    "fshName": "VSSAsignacion",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 114,
+    "endLine": 123
+  },
+  {
+    "outputFile": "ValueSet-VSSCondicionClinica.json",
+    "fshName": "VSSCondicionClinica",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 63,
+    "endLine": 72
+  },
+  {
+    "outputFile": "ValueSet-VSSCondicionClinicaDiagnostico.json",
+    "fshName": "VSSCondicionClinicaDiagnostico",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 50,
+    "endLine": 59
+  },
+  {
+    "outputFile": "ValueSet-VSSDocumento1.json",
+    "fshName": "VSSDocumento1",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 2,
+    "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-VSSEstadoClinico.json",
+    "fshName": "VSSEstadoClinico",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 26,
+    "endLine": 35
+  },
+  {
+    "outputFile": "ValueSet-VSSIdentificador.json",
+    "fshName": "VSSIdentificador",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 14,
+    "endLine": 23
+  },
+  {
+    "outputFile": "ValueSet-VSSServicioSolicitante.json",
+    "fshName": "VSSServicioSolicitante",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 90,
+    "endLine": 99
+  },
+  {
+    "outputFile": "ValueSet-VSSSitioCuerpo.json",
+    "fshName": "VSSSitioCuerpo",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 102,
+    "endLine": 111
+  },
+  {
+    "outputFile": "ValueSet-VSSSospechaDiagnosticada.json",
+    "fshName": "VSSSospechaDiagnosticada",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 38,
+    "endLine": 47
+  },
+  {
+    "outputFile": "ValueSet-VSSTelefono.json",
+    "fshName": "VSSTelefono",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSet.fsh",
+    "startLine": 77,
+    "endLine": 86
+  }
+]

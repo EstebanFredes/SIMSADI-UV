@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSCondicionClinica",
+  "id": "CSSCondicionClinica",
+  "title": "condición clínica.",
+  "description": "Este es un codeSystem en base a los posibles opciones de   condición clínica del paciente.",
+  "url": "http://falp.org/CodeSystem/CSSCondicionClinica",
+  "concept": [
+    {
+      "code": "01",
+      "display": "active"
+    },
+    {
+      "code": "02",
+      "display": "inactive"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 2
+}

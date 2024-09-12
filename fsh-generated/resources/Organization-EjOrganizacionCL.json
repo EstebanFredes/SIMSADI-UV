@@ -1,0 +1,24 @@
+{
+  "resourceType": "Organization",
+  "id": "EjOrganizacionCL",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/Organizacion"
+    ]
+  },
+  "address": [
+    {
+      "line": [
+        "Av El amanecer, 657, Comuna de Las Cruces."
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "use": "mobile",
+      "value": "33-6548776"
+    }
+  ],
+  "name": "Centro de Salud FALP"
+}

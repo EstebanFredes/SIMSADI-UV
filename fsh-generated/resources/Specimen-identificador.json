@@ -1,0 +1,73 @@
+{
+  "resourceType": "Specimen",
+  "id": "identificador",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "ACSN",
+            "display": "Accession ID"
+          }
+        ]
+      },
+      "use": "official",
+      "value": "13456"
+    }
+  ],
+  "accessionIdentifier": {
+    "type": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "111002",
+          "display": "Parathyroid"
+        }
+      ]
+    },
+    "system": "http://snomed.info/sct",
+    "value": "imágenes"
+  },
+  "parent": [
+    {
+      "display": "Estómago"
+    }
+  ],
+  "request": [
+    {
+      "display": "servicio solicitante"
+    }
+  ],
+  "collection": {
+    "collector": {
+      "display": "Profesional"
+    },
+    "quantity": {
+      "value": 1
+    }
+  },
+  "container": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+            "code": "CST",
+            "display": "Fluid, Cyst"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "display": "Paciente"
+  },
+  "note": [
+    {
+      "text": "Las células principales del estómago son:  zimogénicas, peptídicas,​ las cuales son un tipo de célula que forman parte de las glándulas gástricas del estómago, y están encargadas de la secreción de pepsinógeno, lipasa gástrica y quimosina."
+    }
+  ],
+  "receivedTime": "2024-06-22T14:15:30-03:00",
+  "status": "available"
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSSDocumento1",
+  "id": "VSSDocumento1",
+  "title": "secciones por códigos",
+  "description": "secciones que tendrá el documento de entrada de solicitud de biopsia.",
+  "url": "http://falp.org/ValueSet/VSSDocumento1",
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://falp.org/CodeSystem/CSSDocumento1"
+      }
+    ]
+  }
+}

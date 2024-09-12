@@ -1,0 +1,51 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSSitioCuerpo",
+  "id": "CSSSitioCuerpo",
+  "title": "Sitio del cuerpo en el cual se encuentra la muestraa a examinar.",
+  "description": "Descripción especifica del sitio del cuerpo en el cual se encuentra la muestra.",
+  "url": "http://falp.org/CodeSystem/CSSSitioCuerpo",
+  "concept": [
+    {
+      "code": "01",
+      "display": "riñon derecho"
+    },
+    {
+      "code": "02",
+      "display": "riñon izquierdo"
+    },
+    {
+      "code": "03",
+      "display": "Pulmón derecho"
+    },
+    {
+      "code": "04",
+      "display": "Pulmón izquierdo"
+    },
+    {
+      "code": "05",
+      "display": "estómago"
+    },
+    {
+      "code": "06",
+      "display": "tiroides"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 6
+}

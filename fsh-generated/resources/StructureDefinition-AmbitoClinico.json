@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AmbitoClinico",
+  "url": "http://falp.org/StructureDefinition/AmbitoClinico",
+  "name": "AmbitoClinico",
+  "status": "draft",
+  "description": "Documento de datos el ámbito clínico.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Antecedentes Clínicos del paciente",
+        "definition": "Se defienen los antecedentes clínicos de paciente"
+      },
+      {
+        "id": "Composition.extension:clinicalStatus",
+        "path": "Composition.extension",
+        "sliceName": "clinicalStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://falp.org/StructureDefinition/CondicionClinica"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.extension:verificationStatus",
+        "path": "Composition.extension",
+        "sliceName": "verificationStatus",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://falp.org/StructureDefinition/SospechaDiagnosticada"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://falp.org/StructureDefinition/Paciente"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section.code",
+        "path": "Composition.section.code",
+        "min": 1
+      }
+    ]
+  }
+}

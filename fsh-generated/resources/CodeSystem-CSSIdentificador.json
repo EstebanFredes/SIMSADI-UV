@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CSSIdentificador",
+  "id": "CSSIdentificador",
+  "title": "Identificador",
+  "description": "Este es un codeSystem en base a los posibles opciones de identificadores.",
+  "url": "http://falp.org/CodeSystem/CSSIdentificador",
+  "concept": [
+    {
+      "code": "01",
+      "display": "RUN"
+    },
+    {
+      "code": "02",
+      "display": "Pasaporte"
+    }
+  ],
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "count": 2
+}

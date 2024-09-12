@@ -1,0 +1,40 @@
+{
+  "resourceType": "Procedure",
+  "id": "identificador",
+  "meta": {
+    "profile": [
+      "http://falp.org/StructureDefinition/ProcedimientosQuirurgicos"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "https://biomedica.uv.cl/fhir/CodeSystem/CSSIdentificador.",
+            "code": "01",
+            "display": "RUN"
+          }
+        ]
+      },
+      "use": "official",
+      "value": "20.666.234-k"
+    }
+  ],
+  "subject": {
+    "display": "Paciente"
+  },
+  "report": [
+    {
+      "type": "diagnostico",
+      "display": "Órgano piel"
+    }
+  ],
+  "note": [
+    {
+      "text": "Las células neoplásicas son negativas para Citoqueratina 7, Citoqueratina 20, TTF-1, con positivas para p40.  Difuso, intenso.  Con estos hallazgos no es posible determinar si la lesión metastásica es de origen pulmonar o parotidea.  Debe correlacionada con imágenes radiológicas.  Estudio de PDL-1  FUE REALIZADO por Dra. Sanhueza en Clínica Santa María con clon22C3, con alta expresión y TPS mayor a 50 % (cercano al 80 %)."
+    }
+  ],
+  "status": "preparation",
+  "performedDateTime": "2024-06-22T14:15:30-03:00"
+}

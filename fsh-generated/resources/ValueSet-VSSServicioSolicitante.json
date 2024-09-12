@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VSSServicioSolicitante",
+  "id": "VSSServicioSolicitante",
+  "title": "servicio clínico solicitante.",
+  "description": "Identificación del servicio clínico que solicita el exámen.",
+  "url": "http://falp.org/ValueSet/VSSServicioSolicitante",
+  "version": "0.1.0",
+  "experimental": false,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CL",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Chile"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://falp.org/CodeSystem/CSSServicioSolicitante"
+      }
+    ]
+  }
+}
