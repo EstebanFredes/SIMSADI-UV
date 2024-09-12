@@ -1,0 +1,39 @@
+{
+  "systems" : [
+    {
+      "system" : "http://loinc.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "https://biomedica.uv.cl/fhir/CodeSystem/CSSDiagnostico",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://biomedica.uv.cl/fhir/CodeSystem/CSSIdentificador.",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://hl7.org/fhir/R4/v2/0203",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://hl7.org/fhir/R4/v2/0203/index.html",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI.",
+      "authoritative" : [],
+      "candidates" : []
+    }
+  ]
+}
